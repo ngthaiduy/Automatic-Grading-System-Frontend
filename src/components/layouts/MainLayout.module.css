@@ -1,0 +1,217 @@
+.layout {
+  min-height: 100vh;
+  min-height: 100dvh;
+  min-width: 0;
+  overflow-x: hidden;
+  align-items: stretch;
+  background-color: #f8f9fa;
+}
+
+.shell {
+  min-width: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  position: relative;
+  transition:
+    margin-left 0.2s ease,
+    width 0.2s ease;
+}
+
+.header {
+  background-color: #ffffff;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 0;
+  isolation: isolate;
+}
+
+.uti {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+
+  .divider {
+    border-left: 1.25px solid #64748b;
+    height: 2rem;
+    margin: 0 0.8rem;
+  }
+
+  .accWrapper {
+    padding: 0 0.4rem;
+
+    p {
+      text-align: right;
+      line-height: 1.3;
+    }
+
+    p:first-child {
+      font-weight: 600;
+      font-family: "Be Vietnam Pro", system-ui, sans-serif;
+    }
+  }
+}
+
+.sider {
+  position: fixed !important;
+  inset-inline-start: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 30;
+  flex: 0 0 auto !important;
+  align-self: flex-start;
+  overflow: hidden !important;
+  height: 100vh !important;
+  height: 100dvh !important;
+  min-height: 100vh !important;
+  min-height: 100dvh !important;
+  max-height: 100vh !important;
+  max-height: 100dvh !important;
+  scrollbar-width: thin;
+  scrollbar-gutter: stable;
+}
+
+.layout :global(.ant-layout-sider-children) {
+  height: 100%;
+}
+
+.siderInner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100%;
+}
+
+.siderDivider,
+.actionDivider {
+  width: auto;
+  margin-left: -24px;
+  margin-right: -24px;
+  border-top: 1px solid rgb(71 85 105 / 1);
+}
+
+.siderDivider {
+  margin-top: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.menuWrap {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-bottom: 0.75rem;
+  scrollbar-width: thin;
+}
+
+.menuWrap :global(.ant-menu),
+.menuWrap :global(.ant-menu-inline) {
+  border-inline-end: none !important;
+}
+
+.menu {
+  background-color: transparent;
+  font-weight: 500;
+}
+
+.actionArea {
+  margin-top: auto;
+  padding: 0 1rem 0.75rem;
+  background-color: #2d2d2d;
+}
+
+.actionDivider {
+  margin-bottom: 0.75rem;
+}
+
+.content {
+  background-color: #f8f9fa;
+  min-width: 0;
+  min-height: calc(100vh - 64px);
+  min-height: calc(100dvh - 64px);
+  overflow-x: hidden;
+  position: relative;
+  isolation: isolate;
+}
+
+.triggerBtn {
+  font-size: 16px;
+  width: 64;
+  height: 64;
+}
+
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 16px 12px;
+}
+
+.logoWrapper > div:last-child {
+  min-width: 0;
+}
+
+.logoWrapper > div:last-child > h1 {
+  font-size: 0.95rem;
+  color: #ffffff;
+  padding: 0;
+  width: max-content;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.logoWrapper > div:last-child > p {
+  font-size: 0.72rem;
+  color: #94a3b8;
+  font-weight: 600;
+  width: fit-content;
+  line-height: 1.1;
+  padding: 0;
+  margin: 0;
+}
+
+.logo {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.logoCollapsed {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  margin: 20px auto 12px;
+  display: block;
+}
+
+.fadeIn {
+  animation: fadeIn 1500ms;
+}
+
+.fadeOut {
+  animation: fadeOut 1500ms;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,77 @@
+# ===============================
+# Node / Package manager
+# ===============================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+yarn.lock
+nginx.conf
+# ===============================
+# Build output
+# ===============================
+dist/
+dist-ssr/
+build/
+
+# ===============================
+# Vite cache
+# ===============================
+.vite/
+
+# ===============================
+# Environment variables — NEVER commit
+# ===============================
+.env
+.env.local
+.env.development
+.env.development.local
+.env.production
+.env.production.local
+.env.test
+.env.test.local
+.env.*
+!.env.example
+*.local
+
+# ===============================
+# PowerShell scripts (may contain credentials)
+# ===============================
+*.ps1
+!run-local.ps1
+!run-docker.ps1
+
+# ===============================
+# Logs
+# ===============================
+logs/
+*.log
+build_errors.txt
+
+# ===============================
+# Editor / OS
+# ===============================
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+
+# ===============================
+# Test / cache
+# ===============================
+coverage/
+.cache/
+
+# ===============================
+# Dev (demo / scratch)
+# ===============================
+dev/
+docs/
+login_url.txt
+*.pem
+*.key
+*.p12
+*.pfx

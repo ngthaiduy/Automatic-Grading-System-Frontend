@@ -1,0 +1,120 @@
+.card {
+  position: relative;
+  overflow: hidden;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  border: 1px solid rgb(226 232 240);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition:
+    transform 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.28s ease,
+    border-color 0.28s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.08);
+  border-color: rgb(203 213 225);
+}
+
+.cardAlert {
+  border-bottom-width: 4px;
+  border-bottom-color: rgb(239 68 68);
+}
+
+.bgIcon {
+  position: absolute;
+  right: -10px;
+  bottom: -20px;
+  font-size: 100px;
+  color: #f37021;
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+.size36 {
+  font-size: 100px;
+  font-variation-settings: 'OPSZ';
+  opacity: .05;
+  color: #f37021;
+}
+
+/* .bgIconAlert {
+  color: rgb(239 68 68);
+} */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.title {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgb(100 116 139);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.iconWrapper {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  background: rgb(243 112 33 / 0.1);
+  color: #f37021;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.iconWrapper svg,
+.iconWrapper .material-symbols-outlined {
+  font-size: 0.875rem;
+  width: 1em;
+  height: 1em;
+}
+
+.iconWrapperAlert {
+  background: rgb(254 226 226);
+  color: rgb(220 38 38);
+}
+
+.value {
+  margin: 0;
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #f37021;
+  line-height: 1.2;
+}
+
+.valueAlert {
+  color: rgb(220 38 38);
+}
+
+.trend {
+  font-size: 0.75rem;
+  color: rgb(194 65 12);
+  font-weight: 500;
+  text-align: left;
+  margin-top: 0.25rem;
+  width: fit-content;
+  padding: 4px 8px;
+  background-color: rgb(255 237 213);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}

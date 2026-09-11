@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f37120",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#1a130f",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: 0;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex items-center justify-center p-0 md:p-6">
+<div class="flex flex-col md:flex-row w-full max-w-6xl min-h-[90vh] bg-white dark:bg-zinc-900 shadow-2xl overflow-hidden rounded-none md:rounded-xl">
+<div class="hidden md:flex relative w-[60%] bg-[#0a0812] overflow-hidden flex-col justify-between p-12">
+<div class="orb w-80 h-80 bg-primary/30 -top-20 -left-20"></div>
+<div class="orb w-64 h-64 bg-amber-500/20 bottom-20 -right-10"></div>
+<div class="relative z-10">
+<div class="flex items-center gap-3 mb-12">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-white">code</span>
+</div>
+<span class="text-xl font-bold tracking-tight text-white">OOP Exam System</span>
+</div>
+<h1 class="text-5xl font-bold text-white leading-tight mb-6">Tạo tài khoản mới</h1>
+<p class="text-slate-400 text-lg max-w-md">Hệ thống chấm điểm bài thi hướng đối tượng dành riêng cho sinh viên và giảng viên Đại học FPT.</p>
+</div>
+<div class="relative z-10 flex gap-8">
+<div class="flex flex-col items-start gap-2">
+<span class="material-symbols-outlined text-primary text-4xl">terminal</span>
+<p class="text-sm text-slate-500 font-medium">Java Integrated</p>
+</div>
+<div class="flex flex-col items-start gap-2">
+<span class="material-symbols-outlined text-primary text-4xl">auto_awesome</span>
+<p class="text-sm text-slate-500 font-medium">Auto Grading</p>
+</div>
+<div class="flex flex-col items-start gap-2">
+<span class="material-symbols-outlined text-primary text-4xl">security</span>
+<p class="text-sm text-slate-500 font-medium">Secure Access</p>
+</div>
+</div>
+<div class="absolute bottom-0 right-0 w-full h-1/2 opacity-10 pointer-events-none" data-alt="Abstract dark grid pattern with subtle orange glows" style="background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.1) 1px, transparent 0); background-size: 32px 32px;"></div>
+</div>
+<div class="w-full md:w-[40%] bg-white dark:bg-[#121212] flex flex-col p-8 md:p-12 overflow-y-auto">
+<div class="md:hidden flex items-center justify-between mb-8">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400">arrow_back</span>
+<span class="font-bold text-primary">FPT University</span>
+</div>
+<div class="mb-8">
+<h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-2">Đăng ký tài khoản</h2>
+<p class="text-slate-500 dark:text-zinc-400">Bắt đầu hành trình với OOP Exam System</p>
+</div>
+<form class="space-y-4">
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-zinc-300 mb-1.5">Họ và tên</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary transition-colors">person</span>
+<input class="w-full pl-12 pr-4 py-3.5 bg-slate-50 dark:bg-zinc-800/50 border border-slate-200 dark:border-zinc-700 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all dark:text-white" placeholder="Nguyễn Văn A" type="text"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-zinc-300 mb-1.5">Mã sinh viên/giảng viên</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary transition-colors">badge</span>
+<input class="w-full pl-12 pr-4 py-3.5 bg-slate-50 dark:bg-zinc-800/50 border border-slate-200 dark:border-zinc-700 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all dark:text-white" placeholder="Ví dụ: SE123456" type="text"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-zinc-300 mb-1.5">Email FPT</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary transition-colors">mail</span>
+<input class="w-full pl-12 pr-4 py-3.5 bg-slate-50 dark:bg-zinc-800/50 border border-slate-200 dark:border-zinc-700 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all dark:text-white" placeholder="anv@fpt.edu.vn" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-zinc-300 mb-1.5">Mật khẩu</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary transition-colors">lock</span>
+<input class="w-full pl-12 pr-4 py-3.5 bg-slate-50 dark:bg-zinc-800/50 border border-slate-200 dark:border-zinc-700 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all dark:text-white" placeholder="••••••••" type="password"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-zinc-300 mb-1.5">Xác nhận</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary transition-colors">lock_reset</span>
+<input class="w-full pl-12 pr-4 py-3.5 bg-slate-50 dark:bg-zinc-800/50 border border-slate-200 dark:border-zinc-700 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all dark:text-white" placeholder="••••••••" type="password"/>
+</div>
+</div>
+</div>
+<div class="flex items-start gap-3 py-2">
+<input class="mt-1 w-5 h-5 rounded border-slate-300 text-primary focus:ring-primary/30 dark:bg-zinc-800 dark:border-zinc-700" id="terms" type="checkbox"/>
+<label class="text-sm text-slate-600 dark:text-zinc-400" for="terms">
+                        Tôi đồng ý với <span class="text-primary font-medium hover:underline cursor-pointer">Điều khoản sử dụng</span> và <span class="text-primary font-medium hover:underline cursor-pointer">Chính sách bảo mật</span>
+</label>
+</div>
+<button class="w-full py-4 bg-gradient-to-r from-primary to-amber-500 text-white font-bold rounded-full shadow-lg shadow-primary/20 hover:shadow-primary/40 active:scale-[0.98] transition-all" type="submit">
+                    Đăng ký
+                </button>
+</form>
+<div class="relative my-8">
+<div class="absolute inset-0 flex items-center"><div class="w-full border-t border-slate-200 dark:border-zinc-800"></div></div>
+<div class="relative flex justify-center text-sm"><span class="px-4 bg-white dark:bg-[#121212] text-slate-500 dark:text-zinc-500 uppercase tracking-widest text-[10px] font-bold">Hoặc</span></div>
+</div>
+<button class="w-full py-3.5 border border-slate-200 dark:border-zinc-700 rounded-full flex items-center justify-center gap-3 hover:bg-slate-50 dark:hover:bg-zinc-800 transition-colors">
+<svg class="w-5 h-5" viewbox="0 0 24 24">
+<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
+<path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
+<path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.26.81-.58z" fill="#FBBC05"></path>
+<path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"></path>
+</svg>
+<span class="text-sm font-semibold text-slate-700 dark:text-zinc-300">Đăng ký với Google</span>
+</button>
+<div class="mt-auto pt-8 text-center">
+<p class="text-slate-600 dark:text-zinc-400">
+                    Đã có tài khoản? 
+                    <a class="text-primary font-bold hover:underline" href="#">Đăng nhập ngay</a>
+</p>
+</div>
+</div>
+</div>
+</body></html>

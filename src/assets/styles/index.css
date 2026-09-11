@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes ags-fade-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes ags-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes ags-pop-in {
+  from {
+    opacity: 0;
+    transform: scale(0.94) translate3d(0, 14px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    animation: ags-fade-up 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation-delay: var(--enter-delay, 0ms);
+    will-change: transform, opacity;
+  }
+
+  .animate-fade-in {
+    animation: ags-fade-in 0.3s ease both;
+    animation-delay: var(--enter-delay, 0ms);
+  }
+
+  .animate-pop-in {
+    animation: ags-pop-in 0.32s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+    animation-delay: var(--enter-delay, 0ms);
+    will-change: transform, opacity;
+  }
+
+  .hover-lift-soft {
+    transition:
+      transform 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.28s ease,
+      border-color 0.28s ease,
+      background-color 0.28s ease;
+  }
+
+  .hover-lift-soft:hover {
+    transform: translateY(-3px);
+  }
+
+  .stagger-1 {
+    --enter-delay: 70ms;
+  }
+
+  .stagger-2 {
+    --enter-delay: 140ms;
+  }
+
+  .stagger-3 {
+    --enter-delay: 210ms;
+  }
+
+  .stagger-4 {
+    --enter-delay: 280ms;
+  }
+
+  .stagger-5 {
+    --enter-delay: 350ms;
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+}
+
+@layer components {
+  /* ── Floating glass navigation bar (landing page) ── */
+  .glass-nav {
+    background: rgba(26, 28, 35, 0.65);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(243, 112, 33, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15), 0 0 20px rgba(243, 112, 33, 0.08);
+  }
+
+  /* ── Orange text glow ── */
+  .cyber-glow {
+    text-shadow: 0 0 10px rgba(243, 112, 33, 0.7), 0 0 22px rgba(243, 112, 33, 0.45);
+  }
+
+  /* ── Orange border/inset glow ── */
+  .cyber-box-glow {
+    box-shadow: 0 0 14px rgba(243, 112, 33, 0.28), inset 0 0 14px rgba(243, 112, 33, 0.08);
+  }
+
+  /* ── Horizontal circuit line (gradient bar) ── */
+  .circuit-line {
+    position: absolute;
+    background: linear-gradient(90deg, transparent, rgba(243, 112, 33, 0.75), transparent);
+    height: 2px;
+  }
+
+  /* ── Dark perspectived card for hero visual ── */
+  .hologram-panel {
+    background: linear-gradient(135deg, rgba(26, 28, 35, 0.85) 0%, rgba(10, 11, 16, 0.95) 100%);
+    border: 1px solid rgba(243, 112, 33, 0.28);
+    box-shadow: 0 0 30px rgba(243, 112, 33, 0.08) inset, 0 20px 60px rgba(0, 0, 0, 0.5);
+    transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
+  }
+
+  /* ── Skewed section + inner content counter-skew ── */
+  .skew-section {
+    transform: skewY(-3deg);
+    transform-origin: 0;
+  }
+  .unskew-content {
+    transform: skewY(3deg);
+  }
+}
